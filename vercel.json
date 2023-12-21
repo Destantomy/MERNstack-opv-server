@@ -1,0 +1,17 @@
+{
+    "version": 2,
+    "builds": [
+      {
+        "src": "server.js",
+        "use": "@vercel/node"
+      }
+    ],
+    "routes": [
+      { "src": "/api/user", "dest": "routes/user.js" },
+      { "src": "/api/user/login", "dest": "routes/user.js" },
+      { "src": "/api/user/signup", "dest": "routes/user.js" },
+      { "src": "/api/workouts", "dest": "routes/workouts.js" },
+      { "src": "/api/workouts/:id", "dest": "routes/workouts.js" },
+      { "src": "/(.*)", "dest": "server.js" }
+    ]
+  }
